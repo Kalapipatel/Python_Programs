@@ -1,0 +1,30 @@
+i = int(input("Enter the number: "))
+print(i)
+while(i<=38):
+  i = int(input("Enter the number: "))
+  print(i)
+
+print("Done with the loop")
+
+count = 5
+while (count > 0):
+  print(count)
+  count = count - 1
+else:
+  print("I am inside else")
+
+do {
+  loop body;
+}while(condition);
+
+while True:
+  number = int(input("Enter a positive number: "))
+  if not number > 0:
+    break
+  print(number)
+
+
+num = int(input("enter the number : "))
+if not num < 0:
+  print("yes, number is positive")
+  print(num)
