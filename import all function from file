@@ -1,0 +1,47 @@
+# import all the function at a time
+# or eg. we want to import function from Math 
+
+from math import *
+
+#  or we can do like this way
+
+import math
+
+# and then us 
+
+n = 16
+m = math.sqrt(n)
+print(m)
+
+
+-------------------------------------------------
+Accessing Functions as Attributes
+In Python, you can access all functions of a module by importing the entire module. This is done using the import keyword followed by the 
+module name. Once the module is imported, you can then access its functions as attributes of the module. For example:
+
+import math
+
+# Now we can access all functions of the math module
+print(math.sqrt(16))  # Output: 4.0
+
+In the above code, we imported the math module, and then accessed its sqrt function as an attribute. This is a clear and explicit way of 
+importing and using functions.
+
+
+
+Importing All Functions
+While the explicit method is recommended, Python also allows you to import all functions from a module using the from module import * syntax. 
+This imports all functions and makes them available in your current namespace. 
+Here's how you can do it:
+
+from math import *
+
+# Now we can directly use the sqrt function
+print(sqrt(16))  # Output: 4.0
+In the above code, we imported all functions from the math module, and then directly used the sqrt function.
+
+
+Note: While from module import * is a quick way to import all functions, it's not recommended for large projects due to the risk of namespace pollution 
+and reduced readability. Always consider the trade-off between convenience and code quality.
+
+This is my preferred method as it's very clear what package is providing the function.
