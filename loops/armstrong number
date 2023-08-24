@@ -1,0 +1,19 @@
+n = int(input("enter the number you want : "))
+m = n
+
+from math import pow
+sum = 0
+while(n > 0):
+    # print(n)
+    temp = n%10
+    sum = sum + int(pow(temp,3))
+    n = int(n/10)
+    # print(n)
+    
+
+if(sum == m):
+    print("the number is an armstrong number")
+else:
+    print("not an armstrong number")
+
+# 153 is an armstrong number
