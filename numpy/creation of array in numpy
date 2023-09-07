@@ -1,0 +1,42 @@
+import numpy as np
+
+# Creation of the arrays in numpy
+
+# 1
+listarray = np.array([[1,2,3], [2,3,4], [3,4,5]])
+print(listarray)
+print(listarray.dtype)
+print(listarray.shape)
+print(listarray.size)
+
+# 2
+zeros = np.zeros([2,5])
+print(zeros)
+print(zeros.shape)
+print(zeros.size)
+
+#3
+rng = np.arange(15)
+print(rng)
+
+lp = np.linspace(10,50,5)
+print(lp)
+
+#4
+emp = np.empty((2,2))
+print(emp)
+
+ide = np.identity(45)
+print(ide)
+print(ide.shape)
+
+arr = np.arange(99)
+print(arr)
+arr = arr.reshape(3,33)
+print(arr)
+print(arr.shape)
+
+print("------------------------")
+arr = arr.ravel()
+print(arr)
+print(arr.shape)
