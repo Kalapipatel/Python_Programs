@@ -1,0 +1,24 @@
+import pandas as pd
+df = pd.read_csv("D:/material/pandas/rough.csv")
+print(df)
+
+# to print initial rows
+print(df.head())
+print(df.head(2))
+
+# to print last rows
+print(df.tail())
+print(df.tail(2))
+
+
+print(df[2:5])
+
+# to print columns
+print(df.columns)
+
+# to print perticular column
+print(df['event'])
+print(df.days)
+
+# to print more than 1 column
+print(df[['event', 'days']])
