@@ -1,0 +1,49 @@
+import numpy as np
+
+x = [[1,2,3], [4,5,6], [7,1,0]]
+
+ar = np.array(x)
+print(ar)
+# for axis = 0 means sum of column
+print(ar.sum(axis=0))
+# for axis =  means sum of row
+print(ar.sum(axis=1))
+
+# to transpose the array
+print(ar.T)
+
+# ar.flat
+for item in ar.flat:
+    print(item)
+    
+print("-------------")
+# for dimention
+print(ar.ndim)
+
+# for size
+print(ar.size)
+
+print(ar.nbytes)
+
+one = np.array([1,3,4,634,2])
+
+# argmax -> gives index of the maximum value element
+print(one.argmax())
+print(one.argmin())
+
+# sort bye index not by value
+print(one.argsort())
+
+# now perform all the operations in 2D array: in this case(ar)
+print("--------------------")
+print(ar.argmax())  
+print(ar.argmax(axis=0))  
+print(ar.argmax(axis=1))
+  
+print(ar.argmin())
+print(ar.argmin(axis=0))
+print(ar.argmin(axis=1))
+
+print(ar.argsort())
+print(ar.argsort(axis=0))
+print(ar.argsort(axis=1))
