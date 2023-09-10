@@ -1,0 +1,70 @@
+import pandas as pd
+df = pd.read_csv("D:/material/pandas/rough.csv")
+print(df)
+
+# functions
+df['temperature'].max() # 35
+df['temperature'].min() # 24
+df['temperature'].std() # 3.8297084310253524
+
+df.describe()
+
+df[df.temperature>=32]
+# 0	01-01-2017	rain	32	6
+# 1	02-01-2017	sunny	35	7
+# 4	05-01-2017	rain	32	4
+
+
+df[df.temperature == df.temperature.max()]
+# 02-01-2017	sunny	35	7
+
+df['days'][df.temperature == df.temperature.max()]
+# 1    02-01-2017
+# Name: days, dtype: object
+
+df[['days', 'temperature']][df.temperature == df.temperature.max()]
+# 1	02-01-2017	35
+
+df.set_index('days', inplace = True)
+# df	event	temperature	windspeed
+# days			
+# 01-01-2017	rain	32	6
+# 02-01-2017	sunny	35	7
+# 03-01-2017	snow	28	2
+# 04-01-2017	snow	24	7
+# 05-01-2017	rain	32	4
+# 06-01-2017	sunny	31	2
+
+
+df.loc['03-01-2017']
+# event          snow
+# temperature      28
+# windspeed         2
+# Name: 03-01-2017, dtype: object
+
+df.reset_index(inplace=True)
+df
+# days	event	temperature	windspeed
+# 0	01-01-2017	rain	32	6
+# 1	02-01-2017	sunny	35	7
+# 2	03-01-2017	snow	28	2
+# 3	04-01-2017	snow	24	7
+# 4	05-01-2017	rain	32	4
+# 5	06-01-2017	sunny	31	2
+
+df.set_index('event', inplace=True)
+df
+# 	days	temperature	windspeed
+# event			
+# rain	01-01-2017	32	6
+# sunny	02-01-2017	35	7
+# snow	03-01-2017	28	2
+# snow	04-01-2017	24	7
+# rain	05-01-2017	32	4
+# sunny	06-01-2017	31	2
+
+df.loc['snow']
+# 	days	temperature	windspeed
+# event			
+# snow	03-01-2017	28	2
+# snow	04-01-2017	24	7
