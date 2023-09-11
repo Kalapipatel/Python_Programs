@@ -1,0 +1,21 @@
+import pandas as pd
+#1-2
+df = pd.read_csv('rough.csv')
+df2 = pd.read_excel("learning.xlsx")
+
+# 3
+dict = {
+    'day' : ['1-1-17', '2-1-17', '3-1-17','4-1-17'],
+    'temperature' : [32,35,28,24],
+    'windspees' : [6,7,2,7],
+    'event' : ['rain', 'snow' , 'sunny', 'snow']
+}
+df = pd.DataFrame(dict)
+
+# 4
+tuple = [
+    ('1-1-17', 32, 6, 'rain'),
+    ('2-1-17', 35, 7, 'snow'),
+    ('3-1-17', 28, 2, 'sunny')
+]
+df = pd.DataFrame(tuple)
