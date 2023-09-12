@@ -1,0 +1,35 @@
+import pandas as pd
+
+df = pd.read_csv("weather_csv_missing.csv", parse_dates = ['days'])
+type(df.days[0])
+
+df.set_index('days', inplace = True)
+
+newdf = df.fillna(0)
+
+newdf = df.fillna({
+    'temperature' : 0,
+    'event' : 'no event',
+    'windspeed' : 0
+})
+
+
+newd = df.ffill()
+# to fill NAN with above data
+
+
+newd = df.ffill(limit = 1)
+
+newdf = df.interpolate()
+# to fill NaN with linear intepolate
+
+newdf = df.dropna()
+#drop that row wich contain at least 1 NaN
+
+newdf = df.dropna(how = 'all')
+newdf
+# if all the cell of row is empty than only 
+# it will remove that cell (8-1-17) is droped
+
+newdf = df.dropna(thresh = 1) # it needed 1 valid values
+newdf = df.dropna(thresh = 2) # it needed two valid values
